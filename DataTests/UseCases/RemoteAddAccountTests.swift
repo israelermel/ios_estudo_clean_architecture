@@ -130,13 +130,5 @@ extension RemoteAddAccountTests {
         checkMemoryLeak(for: httpPostClient, file: file, line: line)
         
         return (sut, httpPostClient)
-    }
-    
-    func makeAddAccountModel() -> AddAccountModel {
-        return AddAccountModel(name: "any_name",
-                               email: "any_email@email.com",
-                               password: "any_password",
-                               passwordConfirmation: "any_password")
-    }
-    
+    }        
 }
