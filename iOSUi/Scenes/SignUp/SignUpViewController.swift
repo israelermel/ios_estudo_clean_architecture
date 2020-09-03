@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Presentation
 
-class SignUpViewController : UIViewController {
+class SignUpViewController : UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -27,6 +27,7 @@ class SignUpViewController : UIViewController {
     
     private func configure() {
         saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        hideKeyboardOnTap()
     }
     
     @objc private func saveButtonTapped() {
@@ -39,8 +40,10 @@ class SignUpViewController : UIViewController {
 extension SignUpViewController: LoadingView {
     func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
+            view.isUserInteractionEnabled = false
             loadingIndicator?.startAnimating()
         } else {
+            view.isUserInteractionEnabled = true
             loadingIndicator?.stopAnimating()
         }
     }
