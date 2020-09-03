@@ -55,6 +55,7 @@
 		71DA614725005C3A009CBB9E /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA614625005C3A009CBB9E /* SignUpViewControllerTests.swift */; };
 		71DA614925005D0D009CBB9E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA614825005D0D009CBB9E /* SignUpViewController.swift */; };
 		71DA614B25005D7B009CBB9E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DA614A25005D7B009CBB9E /* SignUp.storyboard */; };
+		71DA61522500F7C7009CBB9E /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA61512500F7C7009CBB9E /* TestExtensions.swift */; };
 		71F0052524EA78E3001E615F /* ExtensionsConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0052424EA78E3001E615F /* ExtensionsConverters.swift */; };
 /* End PBXBuildFile section */
 
@@ -227,6 +228,7 @@
 		71DA614625005C3A009CBB9E /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
 		71DA614825005D0D009CBB9E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		71DA614A25005D7B009CBB9E /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		71DA61512500F7C7009CBB9E /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		71F0052424EA78E3001E615F /* ExtensionsConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsConverters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -612,9 +614,8 @@
 		71DA612B25005B49009CBB9E /* iOSUi */ = {
 			isa = PBXGroup;
 			children = (
+				71DA614E2500F73D009CBB9E /* Scenes */,
 				71DA612D25005B49009CBB9E /* Info.plist */,
-				71DA614825005D0D009CBB9E /* SignUpViewController.swift */,
-				71DA614A25005D7B009CBB9E /* SignUp.storyboard */,
 			);
 			path = iOSUi;
 			sourceTree = "<group>";
@@ -622,10 +623,52 @@
 		71DA613625005B4A009CBB9E /* iOSUiTests */ = {
 			isa = PBXGroup;
 			children = (
+				71DA61502500F7B0009CBB9E /* Helpers */,
+				71DA614F2500F748009CBB9E /* Scenes */,
 				71DA613925005B4A009CBB9E /* Info.plist */,
-				71DA614625005C3A009CBB9E /* SignUpViewControllerTests.swift */,
 			);
 			path = iOSUiTests;
+			sourceTree = "<group>";
+		};
+		71DA614C2500F6C2009CBB9E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				71DA614625005C3A009CBB9E /* SignUpViewControllerTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		71DA614D2500F6E6009CBB9E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				71DA614A25005D7B009CBB9E /* SignUp.storyboard */,
+				71DA614825005D0D009CBB9E /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		71DA614E2500F73D009CBB9E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				71DA614D2500F6E6009CBB9E /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		71DA614F2500F748009CBB9E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				71DA614C2500F6C2009CBB9E /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		71DA61502500F7B0009CBB9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				71DA61512500F7C7009CBB9E /* TestExtensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		71F0052324EA78C0001E615F /* Extensions */ = {
@@ -1124,6 +1167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DA614725005C3A009CBB9E /* SignUpViewControllerTests.swift in Sources */,
+				71DA61522500F7C7009CBB9E /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
