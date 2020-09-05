@@ -15,7 +15,7 @@ public final class SignUpPresenter {
     private let addAccount: AddAccount
     private let loadingView: LoadingView
     
-    public  init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount,
+    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount,
                  loadingView: LoadingView) {
         self.alertView = alertView
         self.emailValidator = emailValidator
