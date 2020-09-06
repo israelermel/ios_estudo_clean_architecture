@@ -11,7 +11,7 @@ import Main
 import iOSUi
 import Validation
 
-class SignUpComposerTests: XCTestCase {
+class SignUpFactoryTests: XCTestCase {
 
     func test_background_request_should_complete_on_main_thread() throws {
         let (sut, addAccountSpy) = makeSut()
@@ -29,7 +29,7 @@ class SignUpComposerTests: XCTestCase {
     }
     
     func test_signUp_compose_with_correct_validations() {
-        let validations = SignUpComposer.makeValidations()
+        let validations = makeSignUpValidations()
         
         XCTAssertEqual(validations[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "name", fieldLabel: "Nome"))
         
@@ -46,10 +46,10 @@ class SignUpComposerTests: XCTestCase {
     }
 }
 
-extension SignUpComposerTests {
+extension SignUpFactoryTests {
     func makeSut(file: StaticString = #file, line: UInt = #line) -> (sut: SignUpViewController, addAccountSpy:AddAccountSpy){
         let addAccountSpy = AddAccountSpy()
-        let sut = SignUpComposer.composeControllerWith(addAccount: MainDispatchQueueDecorator(addAccountSpy))
+        let sut = makeSignUpController(addAccount: MainDispatchQueueDecorator(addAccountSpy))
         
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: addAccountSpy, file: file, line: line)
