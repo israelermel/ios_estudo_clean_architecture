@@ -11,117 +11,7 @@ import Presentation
 import Domain
 
 class SignupPresentationTests: XCTestCase {
-    
-    func test_signUp_should_show_erro_message_if_name_not_provided() throws {
-        
-        let alertViewSpy = AlertViewSpy()
-        let sut = makeSut(alertView: alertViewSpy)
-        
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observe {viewModel in
-            XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldName: "nome"))
-            
-            exp.fulfill()
-        }
-        
-        sut.signUp(viewModel: makeSigUpViewModel(name: nil))
-        wait(for: [exp], timeout: 1)
-    }
-    
-    func test_signUp_should_show_erro_message_if_email_not_provided() throws {
-        
-        let alertViewSpy = AlertViewSpy()
-        let sut = makeSut(alertView: alertViewSpy)
-        
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldName: "e-mail"))
-            
-            exp.fulfill()
-        }
-        
-        sut.signUp(viewModel: makeSigUpViewModel(email: nil))
-        wait(for: [exp], timeout: 1)
-    }
-    
-    func test_signUp_should_show_erro_message_if_password_not_provided() throws {
-        
-        let alertViewSpy = AlertViewSpy()
-        let sut = makeSut(alertView: alertViewSpy)
-        
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldName: "senha"))
-            
-            exp.fulfill()
-        }
-        
-        sut.signUp(viewModel: makeSigUpViewModel(password: nil))
-        wait(for: [exp], timeout: 1)
-    }
-    
-    func test_signUp_should_show_erro_message_if_passwordConfirmation_not_provided() throws {
-        
-        let alertViewSpy = AlertViewSpy()
-        let sut = makeSut(alertView: alertViewSpy)
-        
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldName: "confirmação de senha"))
-            
-            exp.fulfill()
-        }
-        
-        sut.signUp(viewModel: makeSigUpViewModel(passwordConfirmation: nil))
-        wait(for: [exp], timeout: 1)
-    }
-    
-    func test_signUp_should_show_erro_message_if_passwordConfirmation_not_match() throws {
-        
-        let alertViewSpy = AlertViewSpy()
-        let sut = makeSut(alertView: alertViewSpy)
-        
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, makeInvalidAlertViewModel(fieldName: "confirma senha"))
-            
-            exp.fulfill()
-        }
-        
-        sut.signUp(viewModel: makeSigUpViewModel(passwordConfirmation: "wrong_password"))
-        wait(for: [exp], timeout: 1)
-    }
-    
-    func test_signUp_should_call_emailValidator_with_correct_email() throws {
-        
-        let emailValidatorSpy = EmailValidatorSpy()
-        let sut = makeSut(emailValidator: emailValidatorSpy)
-        
-        let signUpViewModel = makeSigUpViewModel()
-        sut.signUp(viewModel: signUpViewModel)
-        
-        XCTAssertEqual(emailValidatorSpy.email, signUpViewModel.email)
-    }
-    
-    func test_signUp_should_show_error_message_if_invalid_email_is_provided() throws {
-        
-        let alertViewSpy = AlertViewSpy()
-        let emailValidatorSpy = EmailValidatorSpy()
-        let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
-        
-        emailValidatorSpy.simulateInvalidEmail()
-        
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, makeInvalidAlertViewModel(fieldName: "e-mail"))
-            
-            exp.fulfill()
-        }
-        
-        sut.signUp(viewModel: makeSigUpViewModel())
-        wait(for: [exp], timeout: 1)
-    }
-    
+       
     func test_signUp_should_call_emailValidator_with_correct_values() throws {
         let addAccountSpy = AddAccountSpy()
         
@@ -140,7 +30,7 @@ class SignupPresentationTests: XCTestCase {
         
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, makeErrorAlertViewModel(message: "Algo inesperado aconteceu. tente novamente em alguns instantes."))
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu. tente novamente em alguns instantes."))
             
             exp.fulfill()
         }
@@ -160,7 +50,7 @@ class SignupPresentationTests: XCTestCase {
         
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, makeSuccessAlertViewModel(message: "Conta criada com sucesso."))
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Conta criada com sucesso."))
             
             exp.fulfill()
         }
@@ -196,22 +86,51 @@ class SignupPresentationTests: XCTestCase {
         wait(for: [exp2], timeout: 1)
     }
     
+    func test_signUp_should_call_validation_with_correct_values() {
+        let validationSpy = ValidationSpy()
+        let sut = makeSut(validation: validationSpy)
+        
+        let viewModel = makeSigUpViewModel()
+        sut.signUp(viewModel: viewModel)
+        
+        XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
+    }
+        
+    func test_signUp_should_show_erro_message_if_validation_fails() throws {
+        let validationSpy = ValidationSpy()
+        let alertViewSpy = AlertViewSpy()
+        
+        let sut = makeSut(alertView: alertViewSpy, validation: validationSpy)
+        
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observe {viewModel in
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Falha na validação", message: "Erro"))
+            
+            exp.fulfill()
+        }
+        
+        validationSpy.simulateError()
+        sut.signUp(viewModel: makeSigUpViewModel())
+        wait(for: [exp], timeout: 1)
+    }
     
 }
 
 extension SignupPresentationTests {
     
     func makeSut(alertView: AlertViewSpy = AlertViewSpy(),
-                 emailValidator: EmailValidatorSpy = EmailValidatorSpy(),
                  addAccount : AddAccountSpy = AddAccountSpy(),
                  loadingView: LoadingViewSpy = LoadingViewSpy(),
+                 validation: ValidationSpy = ValidationSpy(),
                  file: StaticString = #file, line: UInt = #line) -> SignUpPresenter {
         
         let sut = SignUpPresenter(alertView: alertView,
-                                  emailValidator: emailValidator,
                                   addAccount: addAccount,
-                                  loadingView: loadingView)
+                                  loadingView: loadingView,
+                                  validation: validation)
+        
         checkMemoryLeak(for: sut, file: file, line: line)
+        
         return sut
     }
 }
