@@ -88,6 +88,11 @@
 		71C289D12504F4B600B54CE4 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C289D02504F4B600B54CE4 /* ApiUrlFactory.swift */; };
 		71C289D52504F5F400B54CE4 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C289D42504F5F400B54CE4 /* AlamofireAdapterFactory.swift */; };
 		71C289D82504F7E700B54CE4 /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C289D72504F7E700B54CE4 /* EmailValidatorAdapterFactory.swift */; };
+		71C289DB2504FD8D00B54CE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C289DA2504FD8D00B54CE4 /* Images.xcassets */; };
+		71C289DD25050D3000B54CE4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C289DC25050D3000B54CE4 /* UIColorExtension.swift */; };
+		71C289DF25050D5D00B54CE4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C289DE25050D5D00B54CE4 /* Color.swift */; };
+		71C289E225050E6F00B54CE4 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C289E125050E6F00B54CE4 /* RoundedTextField.swift */; };
+		71C289E425050F9300B54CE4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C289E325050F9300B54CE4 /* NavigationController.swift */; };
 		71D324BC24F85F0A001C4602 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D324BB24F85F0A001C4602 /* SignUpPresenter.swift */; };
 		71D324C124F85FE7001C4602 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D324C024F85FE7001C4602 /* AlertView.swift */; };
 		71D324C724F9AC9C001C4602 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719ED87324EB487700BC8318 /* AccountModelFactory.swift */; };
@@ -393,6 +398,11 @@
 		71C289D02504F4B600B54CE4 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		71C289D42504F5F400B54CE4 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		71C289D72504F7E700B54CE4 /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
+		71C289DA2504FD8D00B54CE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		71C289DC25050D3000B54CE4 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		71C289DE25050D5D00B54CE4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		71C289E125050E6F00B54CE4 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		71C289E325050F9300B54CE4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		71D324BB24F85F0A001C4602 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		71D324C024F85FE7001C4602 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		71D324C524F863F2001C4602 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -958,6 +968,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		71C289D92504FD6300B54CE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71C289DA2504FD8D00B54CE4 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		71C289E025050E6000B54CE4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				71C289E125050E6F00B54CE4 /* RoundedTextField.swift */,
+				71C289E325050F9300B54CE4 /* NavigationController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		71D324BF24F85FDB001C4602 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -994,6 +1021,8 @@
 		71DA612B25005B49009CBB9E /* iOSUi */ = {
 			isa = PBXGroup;
 			children = (
+				71C289E025050E6000B54CE4 /* Components */,
+				71C289D92504FD6300B54CE4 /* Resources */,
 				71DA61532500FF25009CBB9E /* Helpers */,
 				71DA614E2500F73D009CBB9E /* Scenes */,
 				71DA612D25005B49009CBB9E /* Info.plist */,
@@ -1057,6 +1086,8 @@
 			children = (
 				71DA61542500FF3F009CBB9E /* UIViewControllerExtensions.swift */,
 				71DA61562501004F009CBB9E /* Storyboarded.swift */,
+				71C289DC25050D3000B54CE4 /* UIColorExtension.swift */,
+				71C289DE25050D5D00B54CE4 /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1584,6 +1615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DA614B25005D7B009CBB9E /* SignUp.storyboard in Resources */,
+				71C289DB2504FD8D00B54CE4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1736,8 +1768,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DA61552500FF3F009CBB9E /* UIViewControllerExtensions.swift in Sources */,
+				71C289E225050E6F00B54CE4 /* RoundedTextField.swift in Sources */,
 				71DA614925005D0D009CBB9E /* SignUpViewController.swift in Sources */,
 				71DA61572501004F009CBB9E /* Storyboarded.swift in Sources */,
+				71C289DF25050D5D00B54CE4 /* Color.swift in Sources */,
+				71C289E425050F9300B54CE4 /* NavigationController.swift in Sources */,
+				71C289DD25050D3000B54CE4 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
