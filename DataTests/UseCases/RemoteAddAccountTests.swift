@@ -58,6 +58,27 @@ class RemoteAddAccountTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
+    func test_add_should_complete_with_error_if_client_completes_with_forbidden() {
+           // given
+           let addAcccountModel = makeAddAccountModel()
+           let exp = expectation(description: "waiting")
+           
+           // when
+           let (sut, httpClientSpy) = makeSut()
+           
+           // then
+           sut.add(addAccountModel: addAcccountModel){ result in
+               switch result {
+               case .failure(let error) : XCTAssertEqual(error, .emailInUse)
+               case .success : XCTFail("Expected error reveived \(result) instead")
+               }
+               exp.fulfill()
+           }
+           
+           httpClientSpy.completeWith(error: .forbidden)
+           wait(for: [exp], timeout: 1)
+       }
+    
     func test_add_should_complete_with_error_if_client_completes_with_valid_data() {
         // given
         let addAcccountModel = makeAddAccountModel()

@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>core.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>iOSUi.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -88,6 +93,16 @@
 			<true/>
 		</dict>
 		<key>71C289692503C64600B54CE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71DA612925005B49009CBB9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71DA613125005B49009CBB9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
