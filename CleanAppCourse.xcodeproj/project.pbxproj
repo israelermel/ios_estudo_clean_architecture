@@ -128,6 +128,9 @@
 		71DA819D2505761100A575B2 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DA819C2505761100A575B2 /* Welcome.storyboard */; };
 		71DA81A025057AF200A575B2 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA819F25057AF200A575B2 /* WelcomeViewControllerTests.swift */; };
 		71DA81A225057C0A00A575B2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81A125057C0A00A575B2 /* WelcomeViewController.swift */; };
+		71DA81A4250582E500A575B2 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81A3250582E500A575B2 /* WelcomeRouterTests.swift */; };
+		71DA81A62505892A00A575B2 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81A52505892A00A575B2 /* WelcomeRouter.swift */; };
+		71DA81A8250590D500A575B2 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81A7250590D500A575B2 /* WelcomeControllerFactory.swift */; };
 		71F0052524EA78E3001E615F /* ExtensionsConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0052424EA78E3001E615F /* ExtensionsConverters.swift */; };
 /* End PBXBuildFile section */
 
@@ -457,6 +460,9 @@
 		71DA819C2505761100A575B2 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		71DA819F25057AF200A575B2 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 		71DA81A125057C0A00A575B2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		71DA81A3250582E500A575B2 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
+		71DA81A52505892A00A575B2 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		71DA81A7250590D500A575B2 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
 		71F0052424EA78E3001E615F /* ExtensionsConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsConverters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1005,6 +1011,7 @@
 			children = (
 				71C289962503D21A00B54CE4 /* SignUpControllerFactory.swift */,
 				71DA819825056BD400A575B2 /* LoginControllerFactory.swift */,
+				71DA81A7250590D500A575B2 /* WelcomeControllerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1198,6 +1205,7 @@
 			children = (
 				71DA819C2505761100A575B2 /* Welcome.storyboard */,
 				71DA81A125057C0A00A575B2 /* WelcomeViewController.swift */,
+				71DA81A52505892A00A575B2 /* WelcomeRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1206,6 +1214,7 @@
 			isa = PBXGroup;
 			children = (
 				71DA819F25057AF200A575B2 /* WelcomeViewControllerTests.swift */,
+				71DA81A3250582E500A575B2 /* WelcomeRouterTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1849,6 +1858,7 @@
 				71C289942503D19300B54CE4 /* RemoteAddAccountFactory.swift in Sources */,
 				71C289A32503F9C600B54CE4 /* Environment.swift in Sources */,
 				71C289582503C64500B54CE4 /* AppDelegate.swift in Sources */,
+				71DA81A8250590D500A575B2 /* WelcomeControllerFactory.swift in Sources */,
 				71C289D12504F4B600B54CE4 /* ApiUrlFactory.swift in Sources */,
 				71C2895A2503C64500B54CE4 /* SceneDelegate.swift in Sources */,
 				71DA819725056B7000A575B2 /* RemoteAuthenticationFactory.swift in Sources */,
@@ -1881,6 +1891,7 @@
 				71DA81A225057C0A00A575B2 /* WelcomeViewController.swift in Sources */,
 				71DA61552500FF3F009CBB9E /* UIViewControllerExtensions.swift in Sources */,
 				71C289E225050E6F00B54CE4 /* RoundedTextField.swift in Sources */,
+				71DA81A62505892A00A575B2 /* WelcomeRouter.swift in Sources */,
 				71DA614925005D0D009CBB9E /* SignUpViewController.swift in Sources */,
 				71DA61572501004F009CBB9E /* Storyboarded.swift in Sources */,
 				71C289FC25055CBA00B54CE4 /* LoginViewController.swift in Sources */,
@@ -1899,6 +1910,7 @@
 				71DA81A025057AF200A575B2 /* WelcomeViewControllerTests.swift in Sources */,
 				71DA61522500F7C7009CBB9E /* TestExtensions.swift in Sources */,
 				71C289FD2505637300B54CE4 /* TestsExtensions.swift in Sources */,
+				71DA81A4250582E500A575B2 /* WelcomeRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

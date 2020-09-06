@@ -42,7 +42,7 @@ extension WelcomeViewControllerTests {
         
         checkMemoryLeak(for: sut)
         
-        return sut
+        return (sut, buttonSpy)
     }
 }
 

@@ -44,7 +44,7 @@ class LoginControllerFactoryTests: XCTestCase {
 extension LoginControllerFactoryTests {
     func makeSut(file: StaticString = #file, line: UInt = #line) -> (sut: LoginViewController, authenticationSpy: AuthenticationSpy){
         let authenticationSpy = AuthenticationSpy()
-        let sut = makeLoginController(authentication: MainDispatchQueueDecorator(authenticationSpy))
+        let sut = makeLoginControllerWith(authentication: MainDispatchQueueDecorator(authenticationSpy))
         
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: authenticationSpy, file: file, line: line)
