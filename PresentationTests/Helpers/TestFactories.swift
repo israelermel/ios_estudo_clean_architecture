@@ -18,3 +18,7 @@ func makeSigUpViewModel(name: String? = "any_name",
         name: name, email: email, password: password, passwordConfirmation: passwordConfirmation
     )
 }
+
+func makeLoginViewModel(email: String? = "any_email@email.com", password: String? = "any_password") -> LoginViewModel {
+    return LoginViewModel(email: email, password: password)
+}

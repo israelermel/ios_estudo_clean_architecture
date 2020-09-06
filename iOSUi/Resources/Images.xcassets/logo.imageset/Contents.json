@@ -1,12 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
-    },
-    {
       "filename" : "logo.pdf",
-      "idiom" : "universal",
-      "unassigned" : true
+      "idiom" : "universal"
     }
   ],
   "info" : {
