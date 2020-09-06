@@ -11,14 +11,18 @@ import UIKit
 
 public final class NavigationController: UINavigationController {
     
-    public override init(rootViewController: UIViewController) {
-        super.init(rootViewController: rootViewController)
-        setup()
-    }
-    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
+    }
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    public convenience init() {
+        self.init(nibName: nil, bundle: nil)
     }
     
     private func setup() {
@@ -29,5 +33,12 @@ public final class NavigationController: UINavigationController {
         navigationBar.barStyle = .black
     }
     
+    public func setRootViewController(_ viewController: UIViewController) {
+        setViewControllers([viewController], animated: true)
+    }
+    
+    public func pushViewController(_ viewController: UIViewController) {
+        pushViewController(viewController, animated: true)
+    }
     
 }
