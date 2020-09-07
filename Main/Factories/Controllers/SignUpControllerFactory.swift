@@ -31,5 +31,5 @@ public func makeSignUpValidations() -> [Validation] {
     return ValidationBuilder.field("name").label("Nome").required().build() +
         ValidationBuilder.field("email").label("Email").required().validateEmail().build() +
         ValidationBuilder.field("password").label("Senha").required().build() +
-        ValidationBuilder.field("passwordConfirmation").label("Confirmar Senha").sameAs("password").validateEmail().build()
+        ValidationBuilder.field("passwordConfirmation").label("Confirmar Senha").sameAs("password").build()
 }

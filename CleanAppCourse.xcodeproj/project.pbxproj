@@ -407,6 +407,8 @@
 		7170E0BA24FFC0D3008CBC8E /* AddAccountSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		7170E0BC24FFC129008CBC8E /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		7170E0BF24FFC182008CBC8E /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
+		719CB9B32506BAC900CAA931 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		719CB9B42506BADF00CAA931 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		719ED86C24EB472200BC8318 /* TestsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsExtensions.swift; sourceTree = "<group>"; };
 		719ED86E24EB479900BC8318 /* TestsFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsFactories.swift; sourceTree = "<group>"; };
 		719ED87124EB482400BC8318 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
@@ -987,6 +989,8 @@
 			isa = PBXGroup;
 			children = (
 				71C289A22503F9C600B54CE4 /* Environment.swift */,
+				719CB9B32506BAC900CAA931 /* Debug.xcconfig */,
+				719CB9B42506BADF00CAA931 /* Release.xcconfig */,
 			);
 			path = Env;
 			sourceTree = "<group>";
