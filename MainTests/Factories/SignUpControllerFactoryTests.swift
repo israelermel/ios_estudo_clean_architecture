@@ -16,7 +16,6 @@ class SignUpControllerFactoryTests: XCTestCase {
     func test_background_request_should_complete_on_main_thread() throws {
         let (sut, addAccountSpy) = makeSut()
         sut.loadViewIfNeeded()
-        
         sut.signUp?(makeSigUpViewModel())
         
         let exp = expectation(description: "waiting")

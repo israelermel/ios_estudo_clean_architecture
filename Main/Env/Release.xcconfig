@@ -1,3 +1,5 @@
+//#include "Target Support Files/Pods-Main/Pods-Main.release.xcconfig"
+#include "Pods/Target Support Files/Pods-Main/Pods-Main.release.xcconfig"
 //
 //  Release.xcconfig
 //  CleanAppCourse

@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>API_BASE_URL</key>
-	<string>${API_BASE_URL}</string>
-	<key>CFBundleDisplayName</key>
-	<string>4Dev</string>
+	<string>$(API_BASE_URL)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>4Dev</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

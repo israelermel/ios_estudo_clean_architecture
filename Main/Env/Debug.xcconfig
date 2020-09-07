@@ -1,3 +1,5 @@
+//#include "Target Support Files/Pods-Main/Pods-Main.debug.xcconfig"
+#include "Pods/Target Support Files/Pods-Main/Pods-Main.debug.xcconfig"
 //
 //  Debug.xcconfig
 //  CleanAppCourse
@@ -10,3 +12,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 API_BASE_URL = https:/$()/fordevs.herokuapp.com/api
+
+
+
