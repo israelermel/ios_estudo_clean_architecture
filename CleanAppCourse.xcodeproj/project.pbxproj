@@ -131,6 +131,7 @@
 		71DA81A4250582E500A575B2 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81A3250582E500A575B2 /* WelcomeRouterTests.swift */; };
 		71DA81A62505892A00A575B2 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81A52505892A00A575B2 /* WelcomeRouter.swift */; };
 		71DA81A8250590D500A575B2 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81A7250590D500A575B2 /* WelcomeControllerFactory.swift */; };
+		71DA81AB250592DC00A575B2 /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA81AA250592DC00A575B2 /* ValidationBuilder.swift */; };
 		71F0052524EA78E3001E615F /* ExtensionsConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0052424EA78E3001E615F /* ExtensionsConverters.swift */; };
 /* End PBXBuildFile section */
 
@@ -463,6 +464,7 @@
 		71DA81A3250582E500A575B2 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		71DA81A52505892A00A575B2 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		71DA81A7250590D500A575B2 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
+		71DA81AA250592DC00A575B2 /* ValidationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 		71F0052424EA78E3001E615F /* ExtensionsConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsConverters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -865,6 +867,7 @@
 		71C289562503C64500B54CE4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				71DA81A9250592CE00A575B2 /* Builders */,
 				71C289A625040F9700B54CE4 /* Decorators */,
 				71C2899F2503DDE700B54CE4 /* Env */,
 				71C2899C2503D9FB00B54CE4 /* Proxies */,
@@ -1217,6 +1220,14 @@
 				71DA81A3250582E500A575B2 /* WelcomeRouterTests.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		71DA81A9250592CE00A575B2 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				71DA81AA250592DC00A575B2 /* ValidationBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		71F0052324EA78C0001E615F /* Extensions */ = {
@@ -1854,6 +1865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DA81AB250592DC00A575B2 /* ValidationBuilder.swift in Sources */,
 				71C289D52504F5F400B54CE4 /* AlamofireAdapterFactory.swift in Sources */,
 				71C289942503D19300B54CE4 /* RemoteAddAccountFactory.swift in Sources */,
 				71C289A32503F9C600B54CE4 /* Environment.swift in Sources */,
